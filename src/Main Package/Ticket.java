@@ -4,6 +4,10 @@ public class Ticket {
     private int priority;
     private Customer owner;
 
+    public Ticket(int ticketCounterID, Customer newCust, int priority2) {
+        //TODO Auto-generated constructor stub
+    }
+
     public int getTicketNo() {
         return ticketNo;
     }
@@ -26,6 +30,11 @@ public class Ticket {
 
     public void setOwner(Customer owner) {
         this.owner = owner;
+    }
+
+    public int getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
     }
 
 
