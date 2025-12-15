@@ -1,22 +1,25 @@
-public class Customer extends Person {
-    private Account account;
 
-    // FIX: Passing 3 arguments to super(name, id, phone)
-    public Customer(String name, String nationalID, String phone, Account account) {
-        super(name, nationalID, phone); 
+class Customer extends Person {
+    
+    private Account account;
+    public Customer(int id, String name, Account account) {
+        super(id, name); 
         this.account = account;
     }
+    
+    public Customer(String name, String string, String string2, Account newAcc) {
+		//TODO Auto-generated constructor stub
+	}
 
-    public Account getAccount() { return account; }
+	// Getter
+    public Account getAccount() {
+        return account;
+    }
     
     @Override
     public String toString() {
-        // FIX: Using getNationalID() instead of getId()
-        return "Customer ID: " + getNationalID() + " | Name: " + getName(); 
-    }
-
-    @Override
-    public void printDetails() {
-        System.out.println(toString());
+        return "Customer ID: " + getId() + 
+               " | Name: " + getName() + 
+               " | " + account.toString(); // استدعاء toString() للحساب
     }
 }
