@@ -35,8 +35,12 @@ public class Main {
                 // Create Objects
                 Account newAcc = new Account("ACC" + ticketCounterID, 1000.0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+                
+>>>>>>> bd2a38fead30aa70b9e8fe9afe3a4d05f6277f10
                 // FIX: Matching Customer constructor (Name, ID, Phone, Account)
                 Customer newCust = new Customer(name, "ID" + ticketCounterID, "00000000", newAcc);
                 
