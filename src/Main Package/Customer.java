@@ -1,5 +1,3 @@
-package Main Package;
-
 
 class Customer extends Person {
     
@@ -9,7 +7,11 @@ class Customer extends Person {
         this.account = account;
     }
     
-    // Getter
+    public Customer(String name, String string, String string2, Account newAcc) {
+		//TODO Auto-generated constructor stub
+	}
+
+	// Getter
     public Account getAccount() {
         return account;
     }
