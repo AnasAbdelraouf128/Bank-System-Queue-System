@@ -33,8 +33,7 @@ public class Main {
                 int priority = (isVip == 1) ? 2 : 1;
 
                 Account newAcc = new Account("ACC" + ticketCounterID, 1000.0);
-
-
+                
                 // FIX: Matching Customer constructor (Name, ID, Phone, Account)
                 Customer newCust = new Customer(name, "ID" + ticketCounterID, "00000000", newAcc);
                 
