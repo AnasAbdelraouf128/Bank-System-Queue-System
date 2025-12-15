@@ -2,18 +2,19 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Main {
-    // Static dependencies
     static QueueManager qManager = new QueueManager();
     static Scanner scanner = new Scanner(System.in);
     static int ticketCounterID = 1;
 
     public static void main(String[] args) {
-        // Setup a dummy teller and counter
-        Teller t1 = new Teller("Alice", "E01", "01000", "E01", 5);
+        // Setup a dummy teller
+        // Note: I am passing 5 string/int values. NO "x:" or "name:" text here!
+        Teller t1 = new Teller("Anas", "ID_Anas", "01000", "E01", 5);
         Counter c1 = new Counter(1);
         c1.assignTeller(t1);
-// Headers Modification for a better display
+
         while (true) {
+            // FIX: Removed all "x:" and "s:" hints. Pure strings only.
             System.out.println("\n--- Bank Queue System ---");
             System.out.println("1. Add Customer (Take Ticket)");
             System.out.println("2. Serve Next Customer");
@@ -25,32 +26,21 @@ public class Main {
             int choice = scanner.nextInt();
 
             if (choice == 1) {
-                // Input Data
                 System.out.print("Enter Name: ");
                 String name = scanner.next();
                 System.out.print("Is VIP? (1=Yes, 0=No): ");
                 int isVip = scanner.nextInt();
                 int priority = (isVip == 1) ? 2 : 1;
 
-                // Create Objects
                 Account newAcc = new Account("ACC" + ticketCounterID, 1000.0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
                 
->>>>>>> bd2a38fead30aa70b9e8fe9afe3a4d05f6277f10
                 // FIX: Matching Customer constructor (Name, ID, Phone, Account)
                 Customer newCust = new Customer(name, "ID" + ticketCounterID, "00000000", newAcc);
                 
-=======
-                Customer newCust = new Customer(name, "ID" + ticketCounterID, "000", newAcc);
->>>>>>> parent of 3379d5d (Last edit after khara)
                 Ticket newTicket = new Ticket(ticketCounterID, newCust, priority);
                 
-                // Add to Manager
                 qManager.addTicket(newTicket);
+                System.out.println("Ticket #" + ticketCounterID + " created.");
                 ticketCounterID++;
 
             } else if (choice == 2) {
@@ -62,12 +52,12 @@ public class Main {
                 }
 
             } else if (choice == 3) {
-                qManager.sortQueue(); // Calls Member 4's Manual Bubble Sort
+                qManager.sortQueue(); 
 
             } else if (choice == 4) {
                 System.out.print("Enter Ticket ID to search: ");
                 int targetID = scanner.nextInt();
-                searchTicketManual(targetID); // Calls Member 5's Manual Search
+                searchTicketManual(targetID); 
 
             } else if (choice == 5) {
                 break;
@@ -75,10 +65,9 @@ public class Main {
         }
     }
 
-    // MANUAL SEARCH ALGORITHM (Linear Search)
-    // No list.contains() allowed!
     public static void searchTicketManual(int id) {
-        List<Ticket> list = qManager.getList();
+        // FIX: Using correct method name getWaitingList()
+        List<Ticket> list = qManager.getWaitingList();
         boolean found = false;
 
         for (int i = 0; i < list.size(); i++) {
