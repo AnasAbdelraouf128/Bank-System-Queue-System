@@ -8,7 +8,7 @@ public class QueueManager {
     public void addTicket(Ticket t){
         waitinglist.add(t);
     }
-    // sorting by buublesort algo. by priority then Id
+    // sorting by buuble sort algo. by priority then Id
     // priority and Id get from Ticket class
     public void sortQueue(){
         int n = waitinglist.size();
