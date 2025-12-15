@@ -1,3 +1,3 @@
-public interface IdDisplay {
-
+public interface IDisplayable {
+    void printDetails();
 }
