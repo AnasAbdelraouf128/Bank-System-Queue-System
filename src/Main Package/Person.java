@@ -10,8 +10,14 @@ public abstract class Person implements IDisplayable {
         this.phone = phone;
     }
 
-    public String getName() { return name; }
-    public String getNationalID() { return nationalID; }
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name; }
+    public String getNationalID() {
+        return nationalID; }
 
     // Abstract method enforced by interface
     @Override
