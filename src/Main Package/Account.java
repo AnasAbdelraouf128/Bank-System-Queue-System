@@ -13,6 +13,11 @@ public class Account {
             System.out.println("Deposited: " + amount );
         
     }
+    
+    public void deposit(double amount, String note) {
+    balance += amount;
+    System.out.println("Deposited: " + amount + " - Reason: " + note);
+}
 
     public void withdraw(double amount) {
 
