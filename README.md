@@ -35,6 +35,10 @@ Make sure you have the appropriate compiler/environment installed, such as `[Ins
    ```bash
    git clone [https://github.com/AnasAbdelraouf128/Bank-System-Queue-System.git](https://github.com/AnasAbdelraouf128/Bank-System-Queue-System.git)
 
+### 🏦 واجهة النظام
+
+![شاشة عرض الطابور](screenshots/queue-status.png)
+
 =========================================
       BANK QUEUE MANAGEMENT SYSTEM       
 =========================================
