@@ -34,3 +34,27 @@ Make sure you have the appropriate compiler/environment installed, such as `[Ins
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/AnasAbdelraouf128/Bank-System-Queue-System.git](https://github.com/AnasAbdelraouf128/Bank-System-Queue-System.git)
+
+=========================================
+      BANK QUEUE MANAGEMENT SYSTEM       
+=========================================
+
+[1] Add Customer to Queue (Enqueue)
+[2] Serve Next Customer (Dequeue)
+[3] View Current Queue
+[4] Exit
+
+Select an option: 1
+-> Enter Customer Name/ID: CUST-001
+[SUCCESS] CUST-001 added to the queue.
+
+Select an option: 1
+-> Enter Customer Name/ID: CUST-002
+[SUCCESS] CUST-002 added to the queue.
+
+Select an option: 3
+-> Current Queue: [Front] CUST-001 -> CUST-002 [Rear]
+-> Total waiting: 2
+
+Select an option: 2
+[SERVED] CUST-001 has been served and removed from the queue.
