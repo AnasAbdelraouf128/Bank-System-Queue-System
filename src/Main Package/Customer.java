@@ -22,3 +22,23 @@ public class Customer extends Person {
         return super.getDisplayDetails() + " | Account No: " + account.getAccountNumber();
     }
 }
+   public class customer extends person  {
+
+    private Account account;
+
+    public customer(int id, String name, Account account) {
+        super(id, name);
+        this.account = account;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer ID: " + getId() +
+               "\nName: " +  +getname()+
+               "\nAccount: " + account;
+    }
+   }
